@@ -1,0 +1,30 @@
+\chapter{Other Nonfunctional Requirements}
+\hspace{1cm}In software engineering, non-functional requirements define the quality attributes and operational constraints of a system rather than its specific behaviors. These requirements differ from functional requirements, which focus on explicit system functionalities. Non-functional requirements are often referred to as "quality attributes," "constraints," or "quality goals."\\
+\\Non-functional qualities are generally categorized into two main types:
+\begin{itemize}
+    \item Execution qualities, such as security and usability, which are directly observable during system operation.
+    \item Evolution qualities, such as scalability and maintainability, which define how well the system can adapt to future changes.
+\end{itemize}
+\section{Performance Requirements}
+\hspace{1cm}The ShareTaste platform will be hosted on a reliable server to ensure continuous availability, allowing users to access recipes and manage their accounts at any time. The system follows a client-server architecture using a request-response model to facilitate seamless interactions between users and the platform.\\\\
+{\large\textbf{Key Performance Requirements:}}
+\begin{itemize}
+    \item All web pages should load within 5 seconds under normal network conditions.
+    \item The system must ensure secure and efficient authentication for users.
+    \item Recipe searches should retrieve results within 3 seconds on average.
+\end{itemize}
+\section{Security Requirements}
+\hspace{1cm}Access to the ShareTaste platform will be restricted to registered and authorized users through a secure login system. Users will be required to authenticate using a valid username and password.\\\\
+
+{\large \textbf{Security Measures:}}
+\begin{itemize}
+    \item New users must register with ShareTaste by providing necessary details, including an email address for verification.
+    \item Users will be categorized into three roles:
+    \begin{enumerate}
+        \item Consumers – Can explore and save recipes.
+        \item Professional Chefs – Can submit and verify recipes.
+        \item Administrators – Can oversee content moderation and manage user accounts.
+    \end{enumerate}
+    \item Access permissions will be role-based, ensuring that users can only access features relevant to their account type.
+    \item Error messages will be displayed in cases of invalid login attempts or unauthorized access, ensuring user-friendly security feedback.
+\end{itemize}

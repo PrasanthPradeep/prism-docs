@@ -1,0 +1,128 @@
+\chapter{Requirements Specification}
+
+\section{External Interface Requirements}
+\hspace{1cm}This section focuses on the external interface requirements such as User, Hardware, Software, Communication interface, as well as provide accurate representation about each.
+\subsection{User Interfaces}
+\hspace{1cm}The system will be accessible through web browsers, ensuring compatibility with major modern browsers. It will support a responsive design, making it accessible on mobile devices through a browser without requiring a standalone mobile application.\\
+\\There will be three distinct user interfaces tailored to the roles within ShareTaste:
+\begin{itemize}
+    \item Consumers – Users who explore, customize, and interact with recipes.
+    \item Professional Chefs – Verified chefs who contribute and validate recipes for authenticity.
+    \item Administrators – Users with special privileges to manage accounts, content, and system operations.
+\end{itemize}
+
+\hspace{1cm}Users will first register with ShareTaste. After authentication using a username and password, they will be able to access their respective dashboards. Consumers can browse, save, rate, and review recipes, while Professional Chefs will have additional options to submit and verify recipes. Administrators will oversee content moderation and user management.
+\subsection{Hardware Interfaces}
+\hspace{1cm}There are no specific hardware interface requirements for ShareTaste. It is designed to function on any device that supports a web browser.
+\subsection{Software Interfaces}
+\hspace{1cm}ShareTaste does not require integration with external software applications. The platform is fully web-based and optimized for modern browsers, ensuring seamless user interaction.
+\subsection{Communication Interfaces}
+\hspace{1cm}There are no external communication interface requirements. ShareTaste operates over the internet, and all communications occur through secure web protocols.
+
+\section{Functional Requirements}
+\hspace{1cm}This section focuses on the functional requirements such as login, user, recipe management, as well as provide accurate representation about each.
+\subsection{Login Management}
+\hspace{1cm}All the detail about login management will be provided below:
+\subsection*{3.2.1.1 Login Information}
+The system shall maintain, at a minimum, the following login credentials:
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|l|}
+        \hline
+        \textbf{Property} & \textbf{Mandatory} & \textbf{Explanation} \\
+        \hline
+        Username & Yes & Required for user authentication \\
+        \hline
+        Password & Yes & Used for secure login \\
+        \hline
+    \end{tabular}
+    \caption{User Authentication Properties}
+    \label{tab:user-auth}
+\end{table}
+
+\subsection*{3.2.1.2 Administrator Login Operations}
+\hspace{1cm}Administrators can log into the ShareTaste system using their credentials to oversee user management, content moderation, and system settings.
+\subsection*{3.2.1.3 User Login Operations}
+\hspace{1cm}Consumers and Professional Chefs can log into ShareTaste using their credentials to access their personalized dashboards. Consumers can explore and manage their saved recipes, while Professional Chefs can upload and verify recipes.
+
+\subsection{User Management}
+\hspace{1cm}All the detail about user management will be provided below:
+\subsection*{3.2.2.1 Consumer Information}
+The system shall store the following details for consumers:
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|l|c|m{7cm}|}
+        \hline
+        \textbf{Property} & \textbf{Mandatory} & \textbf{Explanation} \\
+        \hline
+        Name & Yes & Consumer’s full name \\
+        \hline
+        Email & Yes & Contact email address \\
+        \hline
+        Phone & Yes & Contact Phone Number \\
+        \hline
+        Address & No & Optional for personalized recommendations \\
+        \hline
+        Allergies & No & Optional for personalized recommendations \\
+        \hline
+        Preferences & No & User-defined dietary preferences \\
+        \hline
+        Saved Recipes & No & List of bookmarked recipes \\
+        \hline
+    \end{tabular}
+    \caption{User Profile Properties}
+    \label{tab:user_properties}
+\end{table}
+
+\newpage
+
+ \subsection*{3.2.2.2 Professional Chef Information}
+The system shall store the following details for Professional Chefs:
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % Adjust row spacing (optional)
+    \begin{tabular}{|l|c|m{7cm}|}
+        \hline
+        \textbf{Property} & \textbf{Mandatory} & \textbf{Explanation} \\
+        \hline
+        Chef ID & Yes & Unique identifier for chefs \\
+        \hline
+        Name & Yes & Chef’s full name \\
+        \hline
+        Email & Yes & Contact email address \\
+        \hline
+        Phone & Yes & Contact Phone Number \\
+        \hline
+        Address & No & Optional for personalized recommendations \\
+        \hline
+        Specialization & No & Chef’s expertise (e.g., Italian, Vegan) \\
+        \hline
+        Verified Recipes & Yes & List of verified recipes \\
+        \hline
+    \end{tabular}
+    \caption{Chef Profile Properties}
+    \label{tab:chef_properties}
+\end{table}
+
+\subsection*{3.2.2.3 New User Registration}
+\hspace{1cm}New users can register on ShareTaste by providing their personal details and creating a username and password. Professional Chefs must undergo a verification process before gaining recipe approval privileges.
+\subsection*{3.2.2.4 Update User Information}
+\hspace{1cm}Users can update their profiles, including preferences, contact details, and saved recipes.
+\subsection*{3.2.2.5 Delete User Account}
+\hspace{1cm}Administrators have the ability to remove users if necessary.
+\subsection*{3.2.2.6 Query User Information}
+\hspace{1cm}Administrators can search and review user profiles for moderation or verification purposes.
+
+\subsection{Recipe Management}
+\hspace{1cm}All the detail about recipe management will be provided below:
+\subsection*{3.2.3.1 Recipe Submission}
+\hspace{1cm}Professional Chefs can submit new recipes, including details such as ingredients, preparation steps, estimated cooking time, and nutritional information.
+\subsection*{3.2.3.2 Recipe Approval}
+\hspace{1cm}Submitted recipes undergo a verification process by Professional Chefs to ensure authenticity before being published.
+\subsection*{3.2.3.3 Recipe Search and Discovery}
+\hspace{1cm}Users can search for recipes using filters such as ingredients, cuisine, preparation time, and dietary preferences.
+\subsection*{3.2.3.4 Recipe Reviews and Ratings}
+\hspace{1cm}Consumers can rate and review recipes, helping others find the best culinary options.
+\subsection*{3.2.3.5 Saved and Personalized Recommendations}
+\hspace{1cm}Users can bookmark favorite recipes and receive personalized \\recommendations based on their preferences and browsing history.

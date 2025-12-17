@@ -1,0 +1,302 @@
+\chapter{System Features}
+\hspace{1cm}This section details the system features and functionalities identified as key use cases for different users (or actors) interacting with the platform. The following sections group and specify the relevant use cases.
+\section{Software Requirements Collected from Actors}
+\begin{longtable}{|c|m{6cm}|c|c|}
+    \hline
+    \textbf{R.No} & \textbf{Requirements} & \textbf{Requirement Type} & \textbf{Priority} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{R.No} & \textbf{Requirements} & \textbf{Requirement Type} & \textbf{Priority} \\
+    \hline
+    \endhead
+
+    \endlastfoot
+
+    R1  & The system must allow users to post recipes and share them on the platform. & STRQ1 & High \\
+    \hline
+    R2  & The system must allow users to search for and discover recipes. & STRQ2 & High \\
+    \hline
+    R3  & Users can view recipe details, ingredient lists, and instructions. & STRQ3 & High \\
+    \hline
+    R4  & Users must register with their personal details to access full features. & STRQ4 & High \\
+    \hline
+    R5  & System access is limited to Consumers, Professional Chefs, and Administrators. & FEAT1 & High \\
+    \hline
+    R6  & Users can update their profile information and dietary preferences. & STRQ5 & High \\
+    \hline
+    R7  & Users may view their previously saved recipes and contributions. & STRQ6 & High \\
+    \hline
+    R8  & The administrator can manage users, approve recipes, and oversee content moderation. & STRQ7 & High \\
+    \hline
+    R9  & The system shall provide authentication to prevent unauthorized access. & STRQ8 & High \\
+    \hline
+    R10 & The platform must be a website-based application with mobile browser compatibility. & FEAT2 & High \\
+    \hline
+    R11 & The system should be developed using a NoSQL database for scalability and modern web frameworks for the frontend. & FEAT3 & High \\
+    \hline
+    R12 & The system should be accessible via the internet for global users. & FEAT4 & High \\
+    \hline
+    R13 & CAPTCHA should be used to reduce automated logins and spam content submissions. & FEAT5 & Medium \\
+    \hline
+    \caption{Software Requirements}\label{tab:software_requirements}
+\end{longtable}
+
+\section{List of Actors}
+\begin{longtable}{|c|c|p{8cm}|}
+    \hline
+    \textbf{Actor No} & \textbf{Actor} & \textbf{Description} \\
+    \hline
+
+    A1 & Users & Users can explore recipes, save favorites, and personalize their experience based on dietary preferences. \\
+    \hline
+    A2 & Professional Chefs & Verified chefs can upload recipes, provide expert validation, and contribute to premium content. \\
+    \hline
+    A3 & Administrator & The administrator can manage user accounts, approve recipe submissions, and oversee content moderation. \\
+    \hline
+    \caption{Actors}\label{tab:actors}
+\end{longtable}
+
+\section{List of Use Cases}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{8pt} % Adjust column spacing
+    \begin{tabular}{|c|p{5.4cm}<{\raggedright}|p{5.4cm}<{\raggedright}|}
+        \hline
+        \textbf{Use Case No} & \textbf{Use Case Description} & \textbf{Actors} \\ 
+        \hline
+        UC1 & User registration \& Authentication. & Users, Professional Chefs, Admin. \\ 
+        \hline
+        UC2 & Manage user profiles. & Admin, Users, Professional Chefs. \\ 
+        \hline
+        UC3 & Search \& explore recipes. & Users. \\ 
+        \hline
+        UC4 & Submit \& manage recipes. & Users, Professional Chefs. \\ 
+        \hline
+        UC5 & Recipe verification \& approval. & Admin, Professional Chefs. \\ 
+        \hline
+        UC6 & Rate \& review recipes. & Users. \\ 
+        \hline
+        UC7 & Feedback \& reporting. & Users. \\ 
+        \hline
+        UC8 & Platform administration. & Admin. \\ 
+        \hline
+    \end{tabular}
+    \caption{Use Case Table}
+    \label{tab:use_cases}
+\end{table}
+
+\section{Mapping Functional Requirements to Use Cases}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|>{\centering\arraybackslash}p{3cm}|p{9cm}<{\raggedright}|p{3cm}<{\raggedright}|}
+        \hline
+        \textbf{Functional Requirement (STRQ) No} & \textbf{Description} & \textbf{Use Case No} \\ 
+        \hline
+        STRQ1 & The system must allow users to post and share recipes on the platform. & UC4 \\ 
+        \hline
+        STRQ2 & The system must allow users to search and explore recipes. & UC3 \\ 
+        \hline
+        STRQ3 & Users can view recipe details, ingredients, preparation steps, and related information. & UC3 \\ 
+        \hline
+        STRQ4 & The consumer has to register with their personal details to access full features. & UC1 \\ 
+        \hline
+        STRQ5 & The consumer can update their personal details and dietary preferences. & UC2 \\ 
+        \hline
+        STRQ6 & Users may view their previously saved recipes and interactions. & UC2, UC3 \\ 
+        \hline
+        STRQ7 & The administrator can perform operations such as adding new users, deleting users, updating user details, and reviewing content. & UC2, UC4, UC5, UC7, UC8 \\ 
+        \hline
+        STRQ8 & The system shall provide authentication to prevent unauthorized access. & UC1 \\ 
+        \hline
+    \end{tabular}
+    \caption{Functional Requirements Mapping to Use Cases}
+    \label{tab:functional_requirements}
+\end{table}
+
+\section{Use Case Diagram}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{usecase-diagram.png}
+    \caption{Use Cases}
+    \label{fig:usecases-diagram}
+\end{figure}
+
+\subsection{Use Case-1:  User Registration \& Authentication}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC1. User Registration \& Authentication \\ 
+        \hline
+        \textbf{Description} & User registers, logs in, \& authenticates. \\ 
+        \hline
+        \textbf{Actors} & Users, Professional Chefs, Admin \\ 
+        \hline
+        \textbf{Steps} & Enter registration details or login credentials. \\
+                      & System verifies \& grants access. \\ 
+        \hline
+        \textbf{Exit Conditions} & Successful authentication or error message. \\ 
+        \hline
+    \end{tabular}
+    \caption{User Registration \& Authentication}
+    \label{tab:use_case_uc1}
+\end{table}
+
+\subsection{Use Case-2: Manage User Profiles}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC2. Manage User Profiles \\ 
+        \hline
+        \textbf{Description} & Users update personal details or delete accounts. \\ 
+        \hline
+        \textbf{Actors} & Users, Administrators, Professional Chefs \\ 
+        \hline
+        \textbf{Steps} & Navigate to profile settings. \\
+                      & Update details or request account deletion. \\ 
+        \hline
+        \textbf{Exit Condition} & Changes saved or error message. \\ 
+        \hline
+    \end{tabular}
+    \caption{Manage User Profiles}
+    \label{tab:use_case_uc2}
+\end{table}
+
+\subsection{Use Case-3: Search \& Explore Recipes}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC3. Search \& Explore Recipes \\ 
+        \hline
+        \textbf{Description} & Users search and view recipes. \\ 
+        \hline
+        \textbf{Actors} & Users \\ 
+        \hline
+        \textbf{Steps} & Enter keywords or use filters in search. \\
+                      & System displays relevant recipes. \\ 
+        \hline
+        \textbf{Exit Condition} & Recipes displayed or 'no recipes found' message. \\ 
+        \hline
+    \end{tabular}
+    \caption{Search \& Explore Recipes}
+    \label{tab:use_case_uc3}
+\end{table}
+
+\subsection{Use Case-4: Submit \& Manage Recipes}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC4. Submit \& Manage Recipes \\ 
+        \hline
+        \textbf{Description} & Users submit, edit, and manage recipes. \\ 
+        \hline
+        \textbf{Actors} & Users \\ 
+        \hline
+        \textbf{Steps} & Fill in recipe details \& submit. \\
+                      & Edit or delete previously submitted recipes. \\ 
+        \hline
+        \textbf{Exit Condition} & Recipes saved, updated, or deleted. \\ 
+        \hline
+    \end{tabular}
+    \caption{Submit \& Manage Recipes}
+    \label{tab:use_case_uc4}
+\end{table}
+
+\subsection{Use Case-5: Recipe Verification \& Approval}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC5. Recipe Verification \& Approval \\ 
+        \hline
+        \textbf{Description} & Approves or rejects submitted recipes. \\ 
+        \hline
+        \textbf{Actors} & Administrator, Professional Chefs \\ 
+        \hline
+        \textbf{Steps} & Review submitted recipes. \\
+                      & Approve or reject based on quality. \\ 
+        \hline
+        \textbf{Exit Condition} & Recipe approved or rejected with feedback. \\ 
+        \hline
+    \end{tabular}
+    \caption{Recipe Verification \& Approval}
+    \label{tab:use_case_uc5}
+\end{table}
+
+\subsection{Use Case-6: Rate \& Review Recipes}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC6. Rate \& Review Recipes \\ 
+        \hline
+        \textbf{Description} & Users rate and review recipes. \\ 
+        \hline
+        \textbf{Actors} & Users \\ 
+        \hline
+        \textbf{Steps} & Select a recipe \& provide a rating/review. \\
+                      & Submit feedback. \\ 
+        \hline
+        \textbf{Exit Condition} & Review saved or error message displayed. \\ 
+        \hline
+    \end{tabular}
+    \caption{Rate \& Review Recipes}
+    \label{tab:use_case_uc6}
+\end{table}
+
+\subsection{Use Case-7: Feedback \& Reporting}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC7. Feedback \& Reporting \\ 
+        \hline
+        \textbf{Description} & Users provide feedback or report issues. \\ 
+        \hline
+        \textbf{Actors} & Users, Professional Chefs \\ 
+        \hline
+        \textbf{Steps} & Submit feedback or report inappropriate content. \\
+                      & System logs report for review. \\ 
+        \hline
+        \textbf{Exit Condition} & Feedback stored or issue flagged. \\ 
+        \hline
+    \end{tabular}
+    \caption{Feedback \& Reporting}
+    \label{tab:use_case_uc7}
+\end{table}
+
+\subsection{Use Case-8: Platform Management}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & UC8. Platform Management \\ 
+        \hline
+        \textbf{Description} & Manages users, content \& platform settings. \\ 
+        \hline
+        \textbf{Actors} & Admin \\ 
+        \hline
+        \textbf{Steps} & Review user activity, flagged content, and system settings. \\
+                      & Take appropriate actions. \\ 
+        \hline
+        \textbf{Exit Condition} & Changes applied successfully. \\ 
+        \hline
+    \end{tabular}
+    \caption{Platform Management}
+    \label{tab:use_case_uc8}
+\end{table}

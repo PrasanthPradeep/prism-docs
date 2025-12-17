@@ -1,0 +1,46 @@
+%Completed
+\chapter{UML Diagram}
+
+\section{Class diagram}
+\hspace{1cm}Class diagrams are used to describe the structure of a system. Class diagrams describe the system in terms of objects, classes, attributes, operations and their associations. Objects are instances of the classes. In UML classes are depicted by boxes composed of three compartments. The top compartment displays the name of the class. The center compartment displays its attributes, and the bottom compartment displays operations. A link represents the connection between the classes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{UML class.png}
+    \caption{ShareTaste Class Diagram}
+    \label{fig:class-diagram}
+\end{figure}
+ 
+\section{Sequence Diagram}
+
+\hspace{1cm}Sequence diagram is an Interaction Diagram that describes the patterns of communication among a set of interacting objects. An object interacts with another object by sending messages. The reception of message by an object triggers the execution of a method, which in turn may send messages to other objects. Arguments may be passed along with a message and are bound to parameters of the executing method in the receiving object .Sequence Diagrams represent the objects participating in the interaction horizontally and time vertically.
+ 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Sequence diagram.png}
+    \caption{Sequence Diagram}
+    \label{fig:sequence-diagram}
+\end{figure}
+
+\vfill
+
+\section{State Chart Diagrams}
+\hspace{1cm}State chart diagrams describe the dynamic behavior of an individual object as a number of states and transition between these states. A state represents a particular set of values for an object. Given a state, a transition represents a future state the object can move to and the conditions associated with the change of state. A state is represented by a rounded rectangle. A transition is depicted by open arrows connecting two states. States are labeled with their name. A small solid black circle indicates the initial state. A circle surrounding a small solid black circle indicates a final 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{State chart diagram.png}
+    \caption{State Chart Diagram}
+    \label{fig:statechart-diagram}
+\end{figure}
+
+\section{Deployment Diagram}
+\hspace{1cm}A deployment diagram shows on which hardware component each software component is installed (or deployed). It also shows the communication links among the hardware components. A deployment diagram models the physical deployment of artifacts on nodes. The nodes appear as boxes, and the artifacts allocated to each node appear as rectangles within the boxes. A single node in a deployment diagram may conceptually represent multiple physical nodes, such as a cluster of database servers. There are two types of nodes: Device Node and Execution Environment Node. Devices nodes are physically computing resources with processing memory and services to execute software, such as typical computer or mobile phones. Execution Environment Node is a 
+computing resource that runs within an outer node and which itself provides a service to host and execute other executable software elements
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{deployment-diagram.png}
+    \caption{Deployment Diagram}
+    \label{fig:deployment-diagram}
+\end{figure}

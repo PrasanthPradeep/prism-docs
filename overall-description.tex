@@ -1,0 +1,119 @@
+\chapter{Overall Description}
+
+\section{System Environment}
+
+\hspace{2em}The ShareTaste platform involves three main user roles: Administrator, Users, and Professional Chefs. The Administrator manages and oversees the platform's operations, while Users explore recipes, share their own, and interact with content. Professional Chefs review user-submitted recipes for quality and ensure they meet the platform’s standards.\\
+
+Access to ShareTaste is gated by a login system, which requires users to register by providing a username and password. These credentials are securely stored in a centralized database. Once logged in, users can access various features, such as searching for recipes, filtering by dietary restrictions or excluded ingredients, and submitting new recipes for verification.\\
+
+The backend system leverages a robust NoSQL database to efficiently manage dynamic and unstructured data, including user profiles, recipes, dietary preferences, and search filters. The front-end is implemented using modern web development frameworks to ensure a responsive and user-friendly interface.
+\subsection{User Login Sequence}
+\begin{itemize}
+    \item User Authentication: Secure login and registration.
+    \item Recipe Management: Submission, verification, and publication of recipes.
+    \item Advanced Search: Filtering recipes by dietary restrictions, excluded ingredients, and cuisine types.
+    \item Approval Workflow: Professional Chefs verify user-submitted recipes for quality and accuracy.
+\end{itemize}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{System Environment.png}
+    \caption{System Environment}
+    \label{fig:enter-label}
+\end{figure}
+
+\section{Product Perspective}
+ShareTaste bridges the gap between culinary enthusiasts and diverse recipe sources, providing a unified platform to share, discover, and personalize culinary content. Users can search for recipes based on dietary preferences (e.g., vegan, gluten-free) or exclude specific ingredients (e.g., nuts, dairy).
+\\ \\The system allows:
+
+\begin{itemize}
+    \item Users can explore and share recipes, rate and review content, and tailor searches to their preferences.
+    \item Professional Chefs to verify recipes submitted by users, ensuring quality and accuracy. Upload their own creative recipes.
+    \item Administrator to manage user accounts, oversee recipe submissions, and ensure smooth platform operation.
+\end{itemize}
+
+\section{Product Functions}
+\hspace{1cm}This section explains the product function such as login, user, recipe, chef management, as well as provide accurate representation about each.
+\subsection{Login}
+\hspace{1cm}The platform requires users to log in with valid credentials. Users gain access to recipe discovery and sharing features, while Administrators and Professional Chefs can manage content and ensure platform quality.
+
+\subsection{User Management}
+\hspace{1cm}This module handles user-related functionalities such as registration, updating profiles, and managing access levels.
+
+\subsubsection*{2.3.2.1 New User Registration}
+\hspace{1cm}Users can register with their personal details, creating an account to access platform features.
+
+\subsubsection*{2.3.2.2 Update User Details}
+\hspace{1cm}Users can modify their profile details, such as dietary preferences or excluded ingredients, enhancing the personalization of search results.
+
+\subsubsection*{2.3.2.3 Deletion of User}
+\hspace{1cm}Administrators can deactivate or delete user accounts if necessary, ensuring the platform remains safe and compliant with guidelines.
+
+\subsubsection*{2.3.2.4 Query User}
+\hspace{1cm}Administrators can retrieve specific user details for operational or support purposes.
+
+\subsection{Recipe Management}
+\hspace{1cm}The core module for managing recipe-related functionalities.
+
+\subsubsection{2.3.3.1 Add New Recipe}
+\hspace{1cm}Users can submit their recipes, which are sent for approval to Professional Chefs before publication.
+
+\subsubsection{2.3.3.2 Update Recipe Details}
+\hspace{1cm}Users or Chefs can update recipes with additional information or corrections.
+
+\subsubsection{2.3.3.3 Search Recipes}
+\hspace{1cm}Users can search for recipes using advanced filters like dietary restrictions, excluded ingredients, and cuisine type.
+
+\subsection{Chef Verification}
+\hspace{1cm}Professional Chefs verify submitted recipes, ensuring quality, authenticity, and alignment with dietary labels before publication.
+
+\section{User Characteristics}
+\hspace{1cm}This section explains user characterists for users, administraor, Professional chef as well as provide accurate representation about each.
+
+\subsection{Users}
+\hspace{1cm}General users who explore, share, and interact with recipes. They can customize their preferences for a more tailored experience.
+
+\subsection{Administrator}
+\hspace{1cm}The Administrator manages user accounts, monitors recipe submissions, and ensures the system’s smooth operation.
+
+\subsection{Professional Chefs}
+\hspace{1cm}Chefs review user-submitted recipes for quality and relevance. They also play a key role in maintaining platform credibility.
+
+\section{Development Environment}
+\hspace{1cm}The development environment for ShareTaste includes the following tools and technologies:
+\begin{itemize}
+    \item \textbf{Programming Languages:}
+        \begin{itemize}
+            \item JavaScript for both backend and frontend development.
+        \end{itemize}
+    \item \textbf{Frameworks and Tools:}
+        \begin{itemize}
+            \item Node.js and Express.js: For building the backend APIs and server-side logic.
+            \item React.js, TailWind CSS and Context API: For creating a responsive and dynamic user interface.
+        \end{itemize}
+    \item \textbf{Database:}
+    \begin{itemize}
+        \item NoSQL: For scalable and flexible data storage, ideal for managing recipe data, user preferences, and real-time search functionality.
+    \end{itemize}
+\end{itemize}
+
+\section{Constraints}
+\begin{itemize}
+    \item Regulatory Policies: Compliance with privacy regulations such as GDPR.
+    \item Hardware Limitations: NA
+    \item Interfaces to Other Applications: Payment gateway integration for premium features, if any.
+    \item Parallel Operations: NA
+    \item Audit Functions: Periodic system audits to ensure data integrity and security.
+    \item Control Functions: Ensuring appropriate access levels based on user roles.
+    \raggedright \item Safety and Security Considerations: Password encryption, secure authentication, and server-side backups for data protection.
+    \item Reliability Requirements: The system should maintain uptime of at least 99.9\%, except during scheduled maintenance.
+    \item Criticality of the Application: ShareTaste must be available year-round, given its role as a global culinary resource.
+\end{itemize}
+
+
+\section{Assumptions and Dependencies}
+\begin{itemize}
+    \item ShareTaste relies on users having internet access and modern web browsers.
+    \item Recipe submissions depend on user engagement and the availability of chefs for timely verification.
+\end{itemize}
